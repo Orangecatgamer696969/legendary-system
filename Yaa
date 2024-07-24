@@ -1,0 +1,288 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Goose Hub",
+   LoadingTitle = "Goose hub",
+   LoadingSubtitle = "by Schlonny and Orange",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "EeBdhCSyaU", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Goosehub scripts",
+      Subtitle = "Key System",
+      Note = "buy it at our discord",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Key_tv76vut75ct7rc5yrc7r75rc57cr56r5y4cu555 4755c76t t76t 76tv67t6576tv67t76vt"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("Admins", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "Infinity Yield",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/KtyqgNCD",true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Reviz admin",
+   Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Pa1ntex/reviz-admin-v2-script-FE/main/Reviz%20admin%20v2%20FE",true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Shatter vest admin",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/m66HEHFu",true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "CMD X",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fates admin",
+   Callback = function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua",true))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Nameless Admin",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source",true))()
+   end,
+})
+local Tab = Window:CreateTab("Bedwars", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "Raven B4",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Near-B4/Raven-B4-For-Roblox/main/Raven%20B4%20Loader"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Vape v4",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+   end,
+})
+local Tab = Window:CreateTab("Arsenal", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "QP Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/QPScript/Script/main/Arsenal.txt"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Thunder Client",
+   Callback = function()
+   loadstring(game:HttpGet("https://scriptblox.com/raw/Arsenal-Thunder-Client-For-Solara-13092"))()
+   end,
+})
+local Tab = Window:CreateTab("Goose Hub", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "Goose Hub Blade ball",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Orangecatgamer696969/Goose-hub-blade-ball/main/Goose%20Hub%20Blade%20ball"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Goose V4",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/Orangecatgamer696969/Goose-Hub/main/Script'))()
+   end,
+})
+local Tab = Window:CreateTab("Universal", 4483362458) -- Title, Image
+local Toggle = Tab:CreateToggle({
+   Name = "ESP",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+getgenv().EspSettings = {
+	TeamCheck = false,
+	ToggleKey = "RightAlt",
+	RefreshRate = 10, -- how fast the esp updates (milliseconds)
+	MaximumDistance = 500, -- only renders players within this distance
+	FaceCamera = false, -- Makes esp appear 2D
+	AlignPoints = false, -- Improves 2D effect; only works while FaceCamera is enabled
+	-- AlignPoints: This may cause esp to have abnormal behavior when looking from certain angles
+	MouseVisibility = {
+		Enabled = true, -- makes any drawing objects transparent when they are near your mouse
+		Radius = 60,
+		Transparency = 0.3,
+		Method = "Hover", -- "Radius" or "Hover" | Hover is newest method and is a lot more accurate than Radius
+		HoverRadius = 50,
+		Selected = { -- set any of these to false to ignore them
+			Boxes = true,
+			Tracers = true,
+			Names = true,
+			Skeletons = true,
+			HealthBars = true,
+			HeadDots = true,
+			LookTracers = true
+		}
+	},
+	Highlights = {
+		Enabled = false,
+		Players = {}, -- put player usernames into this table to 'highlight' them
+		Transparency = 1,
+		Color = Color3.fromRGB(255, 150, 0),
+		AlwaysOnTop = true
+	},
+	NPC = {
+		Color = Color3.fromRGB(150,150,150),
+		Transparency = 1,
+		RainbowColor = false,
+		Overrides = {
+			Boxes = true,
+			Tracers = true,
+			Names = true,
+			Skeletons = true,
+			HealthBars = true,
+			HeadDots = true,
+			LookTracers = true
+		}
+	},
+	Boxes = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Thickness = 1
+	},
+	Tracers = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Origin = "Top", -- "Top" or "Center" or "Bottom" or "Mouse"
+		Thickness = 1
+	},
+	Names = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		Font = Drawing.Fonts.UI, -- UI or System or Plex or Monospace
+		Size = 18,
+		ShowDistance = false,
+		ShowHealth = true,
+		UseDisplayName = false,
+		DistanceDataType = "m", -- what it says after the distance (ex. 100m)
+		HealthDataType = "Percentage" -- "Percentage" or "Value"
+	},
+	Skeletons = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Thickness = 1
+	},
+	HealthBars = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(0,255,0),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Origin = "None", -- "None" or "Left" or "Right"
+		OutlineBarOnly = true
+	},
+	HeadDots = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Thickness = 1,
+		Filled = false,
+		Scale = 1
+	},
+	LookTracers = {
+		Enabled = true,
+		Transparency = 1,
+		Color = Color3.fromRGB(255,255,255),
+		UseTeamColor = true,
+		RainbowColor = false,
+		Outline = true,
+		OutlineColor = Color3.fromRGB(0,0,0),
+		OutlineThickness = 1,
+		Thickness = 1,
+		Length = 5
+	}
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dragon5819/Main/main/esp", "UniversalEsp"))()
+   Toggle:Set(true)
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fly script",
+   Callback = function()
+   --ARCEUS X FLY V2 SCRIPT
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fling gui",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Orangecatgamer696969/Fling-gui/main/README.md", true)) ()
+   end,
+})
+local Tab = Window:CreateTab("UI", 4483362458) -- Title, Image
+local ColorPicker = Tab:CreateColorPicker({
+    Name = "Color Picker",
+    Color = Color3.fromRGB(255,255,255),
+    Flag = "ColorPicker1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        ColorPicker:Set('Color3.fromRGB(255,255,255')
+    end
+})
+local Tab = Window:CreateTab("Credits", 4483362458) -- Title, Image
+Section:Set("Credits to Schlonny")
+Section:Set("Credits to Orange")
+local Button = Tab:CreateButton({
+   Name = "Discord",
+   Callback = function()
+   setclipboard('https://discord.com/invite/fhSCagnNGn')
+   end,
+})
